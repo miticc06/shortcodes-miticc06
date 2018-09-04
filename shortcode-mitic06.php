@@ -57,5 +57,14 @@ function create_shortcode_DANHGIA($args, $content)
 }
 
 
+  
+function create_shortcode_box_download($args, $content)
+{
+		wp_enqueue_style('plugin_css_miticc06');		
+		$x = '<div class="boxdownload_miticc06"><div class="boxdownload_miticc06_box-inner-block"><i class="fa fa-download boxdownload_miticc06_boxicon"></i>'.$content.'</div></div>';
+        return $x;
+}
+
 add_shortcode( 'DANHGIA', 'create_shortcode_DANHGIA' );
 
+add_shortcode( 'box', 'create_shortcode_box_download' );
